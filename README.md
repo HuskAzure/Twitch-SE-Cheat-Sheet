@@ -9,7 +9,8 @@
   - !cmd edit Hello Hello ${${random.chatter}}! `Changes 'Hello World' to 'Hello @[RandomUser]'`
   - !cmd show Hello `Will show command line in chat "Hello ${sender}"`
 - Options _-Flag_: -enable//-disable//-cd//-usercd//-cost//-type//-level
-  - 
+  - -enable
+  - -disable
 - Variables [~$]:
   -Random: ${random.chatter}/${random.0-100}/${random.pick'rock''paper''scissor'}
 
