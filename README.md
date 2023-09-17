@@ -41,6 +41,7 @@ ${random.pick'rock''paper''scissor'}
 ```
 > [!note]
 > Always use time converted to **seconds**.
+
 > [!important]
 > Some _!command_ ***Custom*** and ***Options*** may require _user level_ to access.
 - **User Level**:
