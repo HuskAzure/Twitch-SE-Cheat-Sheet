@@ -44,8 +44,8 @@ ${random.pick'rock''paper''scissor'}
 
 > [!important]
 > Some _!command_ ***Custom*** and ***Options*** may require _user level_ to access.
-- **User Level**:
 ```
+User Level:
 [100 = viewer]
 [250 = subscriber] auto level to 250
 [300 = regular]
