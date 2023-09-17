@@ -25,11 +25,9 @@
  
 > [!note]
 > Always use time converted to **seconds**.
-
 > [!important]
 > Some _!command_ ***Custom*** and ***Options*** will require _user level_ to access.
-
-[^1] User Level:
+- User level[^1]:
 ```
 [100 = viewer][250 = subscriber][300 = regular]
 [500 = moderator][1000 = super moderator][1500 = broadcaster]
