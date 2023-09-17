@@ -12,16 +12,17 @@
   - !cmd alias add Hello Hi Hiho Ahoy `Will add 'Hi', 'Hiho', 'Ahoy' as command alias`
   - !cmd alias Hello `Will show 'Hi', 'Hiho', 'Ahoy' as command alias`
   - !cmd alias remove Hello Hiho Ahoy `Will remove 'Hiho', 'Ahoy' as command alias`
-+ Options _-Flag_: -disable//-enable//-cd//-usercd//-cost//-level [^1] //-type
++ Options _-Flag_: -disable//-enable//-cd//-usercd//-cost//-level[^1]//-type
   - !cmd options Hello -disable `Will disable 'Hello' command`
   - !cmd options Hello -enable `Will enable 'Hello' command`
   - !cmd options Hello -cd 600 `Will set a global cooldown of 10 minutes in 'Hello' command`
   - !cmd options Hello -usercd 60 `Will set individual user cooldown of 1 minute in 'Hello' command`
   - !cmd options Hello -cost 100 `Will set cost of 100 loyalty points for 'Hello' command`
   - !cmd options Hello -level 100 `Will allow level 100 or higher to use 'Hello' command`
+  - !cmd options Hello -type 
 + Variables [~$]:
   + Random: ${random.chatter}/${random.1-20}/${random.pick'rock''paper''scissor'}
-
+ 
 > [!note]
 > Always use time converted to **seconds**.
 
