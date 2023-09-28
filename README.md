@@ -20,7 +20,7 @@
   - !cmd options Hello **-level** 100 `Will allow level 100 or higher to use 'Hello' command`
   - !cmd options Hello **-type**
 + **Variables [~$]:**
-  + Random: ${random.chatter}//${random.1-20}//${random.pick'rock''paper''scissor'}
+  + Random: ${random.chatter}//${random.1-20}//${random.pick 'rock''paper''scissor'}
 ```
 ${random.chatter}
 !cmd add !Hello Greetings! How are you? ${random.chatter}
@@ -35,7 +35,7 @@ ${random.1-20}
 ```
 ```
 ${random.pick'rock''paper''scissor'}
-!cmd add !rps ${sender} choose ${random.pick'rock''paper''scissor'}!
+!cmd add !rps ${sender} choose ${random.pick 'rock''paper''scissor'}!
 [You]: !rps
 [Bot]: [@You] choose [paper]!
 ```
