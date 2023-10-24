@@ -1,44 +1,62 @@
 # **Twitch StreamElements Cheat Sheet**
-### Basics in Twitch Chat
+Basics in Twitch Chat
 [AnyUser]: **/me** `type '/me' before message to recolor text to same sender user's color`
-### How to !Command `!command == !cmd`
-+ **Custom: add//edit//show//remove//alias//options//**
+## How to !Command `!command == !cmd`
+## 1. **Custom: add//edit//show//remove//alias//options//**
   - !cmd **add** Hello Hello World! `!Hello will send in chat 'Hello World!'`
   - !cmd **edit** Hello Hello ${random.chatter}! `Changes 'Hello World' to 'Hello @[RandomUser]!'`
-  - !cmd **show** Hello `Will show command line in chat "Hello ${sender}"`
-  - !cmd **remove** Hello `Will remove existing 'Hello' command`
-+ **Alias function:**
+  - !cmd **show** Hello `Will show command line in chat "Hello ${random.chatter}"`
+  - !cmd **remove** Hello `Will remove existing '!Hello' command`
+
+**+ Alias function:**
   - !cmd alias **add** Hello Hi Hiho Ahoy `Will add 'Hi', 'Hiho', 'Ahoy' as command alias`
-  - !cmd alias Hello `Will show 'Hi', 'Hiho', 'Ahoy' as command alias`
   - !cmd alias **remove** Hello Hiho Ahoy `Will remove 'Hiho', 'Ahoy' as command alias`
-+ Options _-Flag_: -disable//-enable//-cd//-usercd//-cost//-level//-type
+  - !cmd alias Hello `Will show 'Hi' as command alias`
+
+**+ Options _-Flag_: -disable//-enable//-cd//-usercd//-cost//-level//-type**
   - !cmd options Hello **-disable** `Will disable 'Hello' command`
   - !cmd options Hello **-enable** `Will enable 'Hello' command`
   - !cmd options Hello **-cd** 600 `Will set a global cooldown of 10 minutes in 'Hello' command`
   - !cmd options Hello **-usercd** 60 `Will set individual user cooldown of 1 minute in 'Hello' command`
   - !cmd options Hello **-cost** 100 `Will set cost of 100 'loyalty points' for 'Hello' command`
   - !cmd options Hello **-level** 100 `Will allow level 100 or higher to use 'Hello' command`
-  - !cmd options Hello **-type**
-+ **Variables [~$]:**
-  + Random: ${random.chatter}//${random.1-20}//${random.pick 'rock''paper''scissor'}
+    - !cmd options Hello **-type** reply `Will`
+    - !cmd options Hello **-type** say `Will`
+    - !cmd options Hello **-type** whisper `Will`
+
+### 2. **Variables [~$]:**
+**+ Random: ${random.chatter}//${random.1-20}//${random.pick 'rock''paper''scissor'}//${random.emote}**
+  - ${random.chatter}
 ```
-${random.chatter}
 !cmd add !Hello Greetings! How are you? ${random.chatter}
 [You]: !Hello
 [Bot]: Greetings! How are you? [@RandomUser]
 ```
+  - ${random.1-20}
 ```
-${random.1-20}
 !cmd add !dice ${sender} rolled a d20 and got ${random.1-20}!
 [You]: !dice
 [Bot]: [@You] rolled a d20 and got [19]!
 ```
+  - ${random.pick'rock''paper''scissor'}
 ```
-${random.pick'rock''paper''scissor'}
 !cmd add !rps ${sender} choose ${random.pick 'rock''paper''scissor'}!
 [You]: !rps
 [Bot]: [@You] choose [paper]!
 ```
+  - ${random.emote}
+```
+!cmd add !
+[You]: !
+[Bot]: 
+```
+### 3. **User: ${user}//${user.points}//${user.level}//${user.lastactive}//${user.time_online}** 
+  - ${user}//${user.name}
+  - ${user.points}//${user.points_rank}//${user.points_alltime_rank}
+  - ${user.level}
+  - ${user.lastactive}//${user.lastseen}//${user.lastmessage}
+  - ${user.time_online}//${user.time_offline}//${user.time_online_rank}//${user.time_offline_rank}
+
 > [!note]
 > Always use time converted to **seconds**.
 
